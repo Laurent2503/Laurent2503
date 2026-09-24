@@ -1,52 +1,122 @@
-# Hi, I'm Laurent
+# Laurent Julia Calac
 
-I'm a Data Science & Analytics master's student at **Georgetown University** (AI concentration), graduating in May 2027. I like projects that start with messy, real-world data and end with an answer you can actually defend, whether that's classifying heartbeats or measuring bias across half a million Wikipedia articles.
+### Data Science · Machine Learning · NLP · AI
 
-Before data science, my life revolved around a tennis court. I played **Division I tennis at Georgia Southern** while earning my B.S. in Information Technology, and I still help out as a volunteer graduate assistant with Georgetown's tennis programs. Tennis taught me to stay patient, adjust mid-match, and keep grinding when something isn't working. That turns out to be pretty useful when a model won't converge.
+**M.S. Data Science & Analytics (AI) · Georgetown University**
+**AI R&D Intern · Foerster Group, Germany**
+**Former NCAA Division I Tennis Player · Georgia Southern**
 
-This past summer I worked as an **AI & Data Science Intern at Foerster Group in Germany**, and I'm now looking for **Data Science and Machine Learning** roles.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/YOUR-LINKEDIN)
+[![Email](https://img.shields.io/badge/Email-333333?style=flat\&logo=gmail\&logoColor=white)](mailto:YOUR-EMAIL)
 
 ---
 
-## What I've been working on
+## 👋 About Me
 
-### Inspection Data Platform · Foerster Group (Internship, Summer 2026)
-*Built for the company, so the code is private, but here's what I did.*
+I'm a **Data Science & Analytics master's student at Georgetown University**, focused on machine learning, NLP, and building data systems around messy real-world problems.
 
-Foerster's inspection teams test tubes inside industrial reformer furnaces, and every job leaves behind a pile of files: database backups from the inspection software, Excel sheets with hand-marked defects, and customer reports. All that data existed, but you couldn't search or analyze it without a lot of manual digging. I built an end-to-end pipeline and dashboard that brings **20 years of inspection history** into one searchable place: **4,000+ files from 2,000+ inspections**.
-- **Import pipeline:** automatically restores each proprietary SQL Server backup and loads every table into a central SQLite archive, handling two decades of schema changes across software versions
-- **Excel parser:** finds headers and defect columns dynamically across inconsistent file formats, then extracts every flagged tube and bending measurement
-- **Interactive dashboard:** Streamlit app with drill-down filters (customer, region, year, furnace, inspection type) that flags each job as clear, needs monitoring, or critical, based on the API 579-1 fitness-for-service standard
-- **LLM experiments:** tested local open-source models (Qwen, SQLCoder via Ollama and Hugging Face) for turning plain-English questions into SQL queries against the archive
+I like projects where the answer isn't obvious at the start — whether that's turning **20 years of industrial inspection files into a searchable data platform**, comparing deep learning architectures for **ECG classification**, or analyzing **half a million Wikipedia biographies for gender bias**.
 
-`Python` `SQL Server` `SQLite` `pandas` `pyodbc` `Streamlit` `Ollama` `Hugging Face`
+I especially enjoy the space between the technical and business sides: figuring out what problem actually needs to be solved, building something that answers it, and communicating the results clearly to the people who will use them.
+
+Before data science, I spent most of my time on a tennis court. I played **NCAA Division I tennis** while earning my B.S. in Information Technology and now help Georgetown's tennis programs as a volunteer graduate assistant. Competitive tennis taught me how to work through problems, adapt quickly, and stay composed when the first approach doesn't work — skills that translate surprisingly well to data science.
+
+I graduate in **May 2027** and am currently looking for **Data Science and Machine Learning roles**.
+
+---
+
+## 🚀 Featured Projects
+
+### 🏭 Inspection Data Platform
+
+**Foerster Group · AI R&D Internship · Summer 2026**
+
+> Turning 20 years of fragmented industrial inspection data into one searchable platform.
+
+Foerster's inspection teams test tubes inside industrial reformer furnaces, with each job producing database backups, Excel files, and customer reports. The data existed, but searching or analyzing historical inspections required significant manual work.
+
+I built an end-to-end pipeline and analytics application that consolidated **4,000+ files from 2,000+ inspections spanning 20 years**.
+
+* 🔄 **Import pipeline:** Automatically restores proprietary SQL Server backups and loads their tables into a centralized SQLite archive while handling schema changes across software versions
+* 📊 **Excel parser:** Dynamically identifies headers and defect columns across inconsistent report formats and extracts flagged tubes and bending measurements
+* 🔎 **Interactive dashboard:** Built a Streamlit application with drill-down filters for customer, region, year, furnace, and inspection type, with inspection status based on the API 579-1 fitness-for-service standard
+* 🤖 **LLM experiments:** Tested local open-source models including Qwen and SQLCoder through Ollama and Hugging Face for translating natural-language questions into SQL queries
+
+**Tech:** `Python` `SQL Server` `SQLite` `pandas` `pyodbc` `Streamlit` `Ollama` `Hugging Face`
+
+> 🔒 Built for Foerster Group — source code and company data are private.
+
+---
 
 ### 🫀 [ECG Arrhythmia Detection](https://github.com/Laurent2503/ecg-arrhythmia-detection)
-Can a Transformer read a heartbeat better than a CNN? My team and I tested that on the MIT-BIH Arrhythmia Database, comparing a spectrogram-based CNN, a Transformer on raw waveforms, and a hybrid of the two. The data is heavily imbalanced, so we also leaned on focal loss and SMOTE.
-- The CNN baseline hit **99.0% accuracy** and **0.93 macro F1**
-- On raw waveforms, the Transformer beat a comparable CNN, lifting macro F1 from **0.71 to 0.86**
 
-`PyTorch` `EfficientNet` `Transformers` `NumPy` `Google Colab`
+> Can a Transformer read a heartbeat better than a CNN?
+
+My team and I compared multiple deep learning architectures for ECG arrhythmia classification using the MIT-BIH Arrhythmia Database: a spectrogram-based CNN, a Transformer operating directly on raw waveforms, and a hybrid architecture.
+
+Because arrhythmia classes are heavily imbalanced, we also experimented with **focal loss and SMOTE** to improve minority-class performance.
+
+**Key results:**
+
+* 📈 Spectrogram CNN achieved **99.0% accuracy** and **0.93 macro F1**
+* 🧠 On raw waveforms, the Transformer increased macro F1 from **0.71 to 0.86** compared with a comparable CNN
+* 🔬 Compared how different representations — raw signals and spectrograms — affect deep learning performance on time-series data
+
+**Tech:** `PyTorch` `EfficientNet` `Transformers` `NumPy` `Google Colab`
+
+---
 
 ### 📚 [Gender Bias in Wikipedia Biographies](https://github.com/Laurent2503/wikipedia-gender-bias-nlp)
-Are Wikipedia biographies of women written differently than those of men? We scraped and cleaned **573,000+ biographies**, ran them through three sentiment models (VADER, TextBlob, and RoBERTa), and tested the differences statistically. All three models agreed: articles about women are written in a measurably more positive and subjective tone.
 
-`Python` `Hugging Face` `RoBERTa` `BeautifulSoup` `SciPy` `pandas` `pytest`
+> Are Wikipedia biographies of women written differently than biographies of men?
+
+We scraped and processed **573,000+ Wikipedia biographies** and used NLP and statistical testing to investigate whether writing patterns differed by gender.
+
+We compared three sentiment approaches — **VADER, TextBlob, and RoBERTa** — and tested whether the observed differences were statistically significant.
+
+**Key findings:**
+
+* 📝 All three sentiment models identified differences in tone between biographies of men and women
+* 📊 Biographies of women showed measurably more positive and subjective language
+* 🧪 Statistical testing was used to determine whether observed differences were likely to reflect systematic patterns rather than sampling noise
+* ⚙️ Built a large-scale scraping, cleaning, NLP, and analysis pipeline for **573K+ documents**
+
+**Tech:** `Python` `Hugging Face` `RoBERTa` `BeautifulSoup` `SciPy` `pandas` `pytest`
 
 ---
 
-## Tools I use
+## 🛠️ Tech Stack
 
-**Languages:** Python, SQL  
-**ML / Deep Learning:** PyTorch, scikit-learn, Hugging Face Transformers, Ollama (local LLMs)  
-**Data & Databases:** pandas, NumPy, SciPy, SQLite, SQL Server  
-**Workflow & Apps:** Git, Streamlit, Jupyter, Google Colab, Poetry, pytest
+### Languages & Data
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat\&logo=python\&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat\&logo=mysql\&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=flat\&logo=pandas\&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat\&logo=numpy\&logoColor=white)
+
+### Machine Learning & AI
+
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat\&logo=pytorch\&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat\&logo=scikitlearn\&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=flat)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat\&logo=ollama\&logoColor=white)
+
+### Databases & Tools
+
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat\&logo=sqlite\&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat\&logo=git\&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat\&logo=streamlit\&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat\&logo=jupyter\&logoColor=white)
+
+**Also:** SQL Server · SciPy · BeautifulSoup · pyodbc · pytest · Poetry · Google Colab
 
 ---
 
-## Let's connect
+## 🤝 Let's Connect
 
-Always happy to talk about data science, ML, or tennis.
+I'm always happy to talk about **data science, machine learning, AI, or tennis**.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/laurent-julia-calac/)
-[![Email](https://img.shields.io/badge/Email-333333?style=for-the-badge&logo=maildotru&logoColor=white)](mailto:laurent.juliacalac@gmail.com)
+I'm graduating from Georgetown in **May 2027** and am currently exploring **Data Science and Machine Learning opportunities**.
+
+[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/YOUR-LINKEDIN)
+[![Email](https://img.shields.io/badge/Send_me_an_Email-333333?style=for-the-_)]()
