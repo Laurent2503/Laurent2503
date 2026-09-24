@@ -2,9 +2,9 @@
 
 ### Data Science · Machine Learning · NLP · AI
 
-**M.S. Data Science & Analytics · AI Concentration · Georgetown University**
-**AI & Data Science Intern · Foerster Group, Germany**
-**Former NCAA Division I Tennis Player · Georgia Southern University**
+* **M.S. Data Science & Analytics · AI Concentration · Georgetown University**
+* **AI & Data Science Intern · Foerster Group, Germany**
+* **Former NCAA Division I Tennis Player · Georgia Southern University**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/laurent-julia-calac/)
 [![Email](https://img.shields.io/badge/Email-333333?style=flat\&logo=gmail\&logoColor=white)](mailto:laurent.juliacalac@gmail.com)
